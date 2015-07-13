@@ -5,11 +5,12 @@ function isValidPassword(password) {
     var containsLower = /[a-z]/.test(password);
     var containsAtLeast8Characters = /[a-zA-Z0-9]{8,}/;
 
-    if (containsDigits && containsUpper && containsLower && containsAtLeast8Characters) {
+    if (containsDigits && containsUpper && containsLower && containsAtLeast8Characters && lenghtshorterthaneight) {
         return true;
     } else {
         return false;
     }
+
 }
 
 // test

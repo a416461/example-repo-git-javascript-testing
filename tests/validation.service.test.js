@@ -43,8 +43,12 @@
 			});
 			
 			it('Checks a invalid password "Password" missing numeric characters is invalid', function() {
-		    	expect(validationService.isValidPassword('Password')).toBe(false);
+			    expect(validationService.isValidPassword('Password')).toBe(false);
 			});
+
+		    it('Checks a invalid password "Pass" less than 8 characters is invalid', function() {
+			    expect(validationService.isValidPassword('Pass12')).toBe(false);  
+		    });
 
 			// Add a test to check that the isValidPassword() correctly checks that the password is at least 8 characters in length.
 		});

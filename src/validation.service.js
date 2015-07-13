@@ -26,13 +26,16 @@ var validationService = (function() {
 		
 		return regex.test(phoneNumber);
 	}
+
+
 	
 	function isValidPassword(password) {	
 		var containsDigits = /[0-9]/.test(password);
 		var containsUpper = /[A-Z]/.test(password);
 		var containsLower = /[a-z]/.test(password);
-		
-		if (containsDigits && containsUpper && containsLower) {
+		var containsAtLeast8Characters = /[a-zA-Z0-9]{8,}/.test(password);
+
+		if (containsDigits && containsUpper && containsLower && containsAtLeast8Characters) {
 			return true;
 		} else {
 			return false;
